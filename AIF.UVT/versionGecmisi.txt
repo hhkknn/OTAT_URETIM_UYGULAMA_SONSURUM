@@ -1,0 +1,11 @@
+﻿1.0.0.4
+
+- Üretimde girilen miktarların %10 sapma paylarına göre yapılması kontrolleri koyuldu.
+
+1.0.0.5
+
+- Üretim tamamlayamama maili ile ilgili hata giderildi.
+
+1.0.0.6
+
+- Sarfiyat ekranındaki ve tamamlama ekranındaki sapma kontrolleri kaldırıldı.

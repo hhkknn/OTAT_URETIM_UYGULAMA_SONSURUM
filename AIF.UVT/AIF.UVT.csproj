@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A012257-0072-4CD1-BE5D-8984D4C04481}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AIF.UVT</RootNamespace>
+    <AssemblyName>AIF.UVT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\172.55.10.16\Üretimden Veri Toplama\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.55.10.16\Üretimden Veri Toplama\</InstallUrl>
+    <UpdateUrl>\\172.55.10.16\Üretimden Veri Toplama\</UpdateUrl>
+    <TargetCulture>tr-TR</TargetCulture>
+    <ProductName>Üretimden Veri Toplama</ProductName>
+    <PublisherName>AIFTeam</PublisherName>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>aif_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AIF.UVT.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5B012FCC8F80AF510500F08C4ACFD165E83D451A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AIF.UVT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=14.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\13.0.3500.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=14.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\13.0.3500.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=14.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\13.0.3500.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.2.17559, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vip.ObjectListView.1.0.3\lib\net48\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK">
+      <HintPath>..\..\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\UVTService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\BulkKulturAnalizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\BulkKulturAnalizi.Designer.cs">
+      <DependentUpon>BulkKulturAnalizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\GramajKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\GramajKontrol.Designer.cs">
+      <DependentUpon>GramajKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\KaliteGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\KaliteGiris.Designer.cs">
+      <DependentUpon>KaliteGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirGunlukAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirGunlukAnalizGiris.Designer.cs">
+      <DependentUpon>TazePeynirGunlukAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirSalamuraSuyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirSalamuraSuyu.Designer.cs">
+      <DependentUpon>TazePeynirSalamuraSuyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagGunlukAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagGunlukAnalizGiris.Designer.cs">
+      <DependentUpon>TereyagGunlukAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakipSatir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakipSatir.Designer.cs">
+      <DependentUpon>TostPeynirProsesTakipSatir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\UretimSarfiyatPartiValidasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\UretimSarfiyatPartiValidasyon.Designer.cs">
+      <DependentUpon>UretimSarfiyatPartiValidasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtMamulAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtMamulAnalizGiris.Designer.cs">
+      <DependentUpon>YogurtMamulAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\PaletBarkoduOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\PaletBarkoduOlustur.Designer.cs">
+      <DependentUpon>PaletBarkoduOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SayiKlavyesiPartiSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SayiKlavyesiPartiSecim.Designer.cs">
+      <DependentUpon>SayiKlavyesiPartiSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\TemizlikYoneticiOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\TemizlikYoneticiOnay.Designer.cs">
+      <DependentUpon>TemizlikYoneticiOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_ANALIZ_EKRANLARI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_ANALIZ_EKRANLARI.Designer.cs">
+      <DependentUpon>20_ANALIZ_EKRANLARI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_002_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_002_3.Designer.cs">
+      <DependentUpon>20_FSAPKY_002_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_003_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_003_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_003_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_003_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_003_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_003_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_1_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_004_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_1_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_004_1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_004_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_004_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_004_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_004_3.Designer.cs">
+      <DependentUpon>20_FSAPKY_004_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_001.Designer.cs">
+      <DependentUpon>20_FSAPKY_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_006_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_006_1_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_006_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_006_1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_006_1_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_006_1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_006_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_006_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_006_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_007_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_2_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_007_2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_3.Designer.cs">
+      <DependentUpon>20_FSAPKY_007_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_005_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_005_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_005_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_005_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_3_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_3_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_005_3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_3_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_005_3_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_005_3_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_008_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_008_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_008_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_007_2_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_007_2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_009_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_009_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_009_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_010_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_010_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_010_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_008_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_008_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_008_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_010_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_010_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_010_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_011_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_011_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_011_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_011_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\20_FSAPKY_011_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_011_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_012_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_012_1.Designer.cs">
+      <DependentUpon>20_FSAPKY_012_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_012_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_20URVT\20_FSAPKY_012_2.Designer.cs">
+      <DependentUpon>20_FSAPKY_012_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AciklamaGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AciklamaGirisi.Designer.cs">
+      <DependentUpon>AciklamaGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\AktiviteIslemleri_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\AktiviteIslemleri_2.Designer.cs">
+      <DependentUpon>AktiviteIslemleri_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\AkviteIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\AkviteIslemleri.Designer.cs">
+      <DependentUpon>AkviteIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AnalizEkranlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AnalizEkranlari.Designer.cs">
+      <DependentUpon>AnalizEkranlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\AtanmisIsler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\AtanmisIsler.Designer.cs">
+      <DependentUpon>AtanmisIsler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranAnalizGiris.Designer.cs">
+      <DependentUpon>AyranAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_1.Designer.cs">
+      <DependentUpon>AyranGunlukOzet_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_2.Designer.cs">
+      <DependentUpon>AyranGunlukOzet_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranGunlukOzet_3.Designer.cs">
+      <DependentUpon>AyranGunlukOzet_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranPaketlemeAnalizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranPaketlemeAnalizi.Designer.cs">
+      <DependentUpon>AyranPaketlemeAnalizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_1.Designer.cs">
+      <DependentUpon>AyranProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_1_1.Designer.cs">
+      <DependentUpon>AyranProsesTakip_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\AyranProsesTakip_3.Designer.cs">
+      <DependentUpon>AyranProsesTakip_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\BanaAitİsler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\BanaAitİsler.Designer.cs">
+      <DependentUpon>BanaAitİsler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\CustomMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\CustomMsgBox.Designer.cs">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\CustomMsgBtn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\CustomMsgBtn.Designer.cs">
+      <DependentUpon>CustomMsgBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLayer\Connection.cs" />
+    <Compile Include="FORM_ORTAK\Barkod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\Barkod.Designer.cs">
+      <DependentUpon>Barkod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\GunlukTemizlik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\GunlukTemizlik.Designer.cs">
+      <DependentUpon>GunlukTemizlik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimRaporu.Designer.cs">
+      <DependentUpon>UretimRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UygunUygunDegil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UygunUygunDegil.Designer.cs">
+      <DependentUpon>UygunUygunDegil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\Yukleniyor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\Yukleniyor.Designer.cs">
+      <DependentUpon>Yukleniyor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallerSetup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InstallerSetup.Designer.cs">
+      <DependentUpon>InstallerSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\KasarPeynirAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\KasarPeynirAnalizGiris.Designer.cs">
+      <DependentUpon>KasarPeynirAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\KaymakPeynirAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\KaymakPeynirAnalizGiris.Designer.cs">
+      <DependentUpon>KaymakPeynirAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Helper.cs" />
+    <Compile Include="FORM_10URVT\LorAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\LorAnalizGiris.Designer.cs">
+      <DependentUpon>LorAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\LorProsesTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\LorProsesTakip.Designer.cs">
+      <DependentUpon>LorProsesTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\MatrixKolonBirlestirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\MatrixKolonBirlestirme.Designer.cs">
+      <DependentUpon>MatrixKolonBirlestirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyList.cs" />
+    <Compile Include="Models\ComboValues.cs" />
+    <Compile Include="Models\UretimSarf.cs" />
+    <Compile Include="Models\OlustulacakPartiler.cs" />
+    <Compile Include="Models\PartiSecimi.cs" />
+    <Compile Include="Library\parseNumber.cs" />
+    <Compile Include="FORM_CIKARILAN\PartiSecimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\PartiSecimi.Designer.cs">
+      <DependentUpon>PartiSecimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\PastorizasyonProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\PastorizasyonProsesTakip_1.Designer.cs">
+      <DependentUpon>PastorizasyonProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="FORM_CIKARILAN\ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FORM_ORTAK\TarihGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\TarihGirisi.Designer.cs">
+      <DependentUpon>TarihGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SaatTarihGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SaatTarihGirisi.Designer.cs">
+      <DependentUpon>SaatTarihGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SayiKlavyesiNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SayiKlavyesiNew.Designer.cs">
+      <DependentUpon>SayiKlavyesiNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\SelectList.Designer.cs">
+      <DependentUpon>SelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirProsesTakip_1.Designer.cs">
+      <DependentUpon>TazePeynirProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirProsesTakip_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TazePeynirProsesTakip_2.Designer.cs">
+      <DependentUpon>TazePeynirProsesTakip_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeProsesTakip_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeProsesTakip_2.Designer.cs">
+      <DependentUpon>TelemeProsesTakip_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\TemizlikTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\TemizlikTakip.Designer.cs">
+      <DependentUpon>TemizlikTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeAnalizGiris.Designer.cs">
+      <DependentUpon>TelemeAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeProsesTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TelemeProsesTakip.Designer.cs">
+      <DependentUpon>TelemeProsesTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagAnalizGiris.Designer.cs">
+      <DependentUpon>TereyagAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagProsesTakip_1.Designer.cs">
+      <DependentUpon>TereyagProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagProsesTakip_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagProsesTakip_2.Designer.cs">
+      <DependentUpon>TereyagProsesTakip_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagTemizlikTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TereyagTemizlikTakip.Designer.cs">
+      <DependentUpon>TereyagTemizlikTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakip_1.Designer.cs">
+      <DependentUpon>TostPeynirProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakip_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirProsesTakip_2.Designer.cs">
+      <DependentUpon>TostPeynirProsesTakip_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirTemizlikTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\TostPeynirTemizlikTakip.Designer.cs">
+      <DependentUpon>TostPeynirTemizlikTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimdenGirisMiktari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimdenGirisMiktari.Designer.cs">
+      <DependentUpon>UretimdenGirisMiktari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\UretimSarfiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CIKARILAN\UretimSarfiyat.Designer.cs">
+      <DependentUpon>UretimSarfiyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimSarfiyat_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ORTAK\UretimSarfiyat_2.Designer.cs">
+      <DependentUpon>UretimSarfiyat_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtAnalizGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtAnalizGiris.Designer.cs">
+      <DependentUpon>YogurtAnalizGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_1.Designer.cs">
+      <DependentUpon>YogurtProsesTakip_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_1_1.Designer.cs">
+      <DependentUpon>YogurtProsesTakip_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_10URVT\YogurtProsesTakip_2.Designer.cs">
+      <DependentUpon>YogurtProsesTakip_2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORM_10URVT\BulkKulturAnalizi.resx">
+      <DependentUpon>BulkKulturAnalizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\GramajKontrol.resx">
+      <DependentUpon>GramajKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\KaliteGiris.resx">
+      <DependentUpon>KaliteGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TazePeynirGunlukAnalizGiris.resx">
+      <DependentUpon>TazePeynirGunlukAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TazePeynirSalamuraSuyu.resx">
+      <DependentUpon>TazePeynirSalamuraSuyu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TereyagGunlukAnalizGiris.resx">
+      <DependentUpon>TereyagGunlukAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TostPeynirProsesTakipSatir.resx">
+      <DependentUpon>TostPeynirProsesTakipSatir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\UretimSarfiyatPartiValidasyon.resx">
+      <DependentUpon>UretimSarfiyatPartiValidasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\YogurtMamulAnalizGiris.resx">
+      <DependentUpon>YogurtMamulAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\PaletBarkoduOlustur.resx">
+      <DependentUpon>PaletBarkoduOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\SayiKlavyesiPartiSecim.resx">
+      <DependentUpon>SayiKlavyesiPartiSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\TemizlikYoneticiOnay.resx">
+      <DependentUpon>TemizlikYoneticiOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_ANALIZ_EKRANLARI.resx">
+      <DependentUpon>20_ANALIZ_EKRANLARI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_002_1.resx">
+      <DependentUpon>20_FSAPKY_002_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_002_2.resx">
+      <DependentUpon>20_FSAPKY_002_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_002_3.resx">
+      <DependentUpon>20_FSAPKY_002_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_003_1.resx">
+      <DependentUpon>20_FSAPKY_003_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_003_2.resx">
+      <DependentUpon>20_FSAPKY_003_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_004_1_1.resx">
+      <DependentUpon>20_FSAPKY_004_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_004_1_2.resx">
+      <DependentUpon>20_FSAPKY_004_1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_004_2.resx">
+      <DependentUpon>20_FSAPKY_004_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_004_3.resx">
+      <DependentUpon>20_FSAPKY_004_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_001.resx">
+      <DependentUpon>20_FSAPKY_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_006_1_1.resx">
+      <DependentUpon>20_FSAPKY_006_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_006_1_2.resx">
+      <DependentUpon>20_FSAPKY_006_1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_006_2.resx">
+      <DependentUpon>20_FSAPKY_006_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_007_1.resx">
+      <DependentUpon>20_FSAPKY_007_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_007_2_2.resx">
+      <DependentUpon>20_FSAPKY_007_2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_007_3.resx">
+      <DependentUpon>20_FSAPKY_007_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_005_1.resx">
+      <DependentUpon>20_FSAPKY_005_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_005_2.resx">
+      <DependentUpon>20_FSAPKY_005_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_005_3_1.resx">
+      <DependentUpon>20_FSAPKY_005_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_005_3_2.resx">
+      <DependentUpon>20_FSAPKY_005_3_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_008_1.resx">
+      <DependentUpon>20_FSAPKY_008_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_007_2_1.resx">
+      <DependentUpon>20_FSAPKY_007_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_009_1.resx">
+      <DependentUpon>20_FSAPKY_009_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_010_1.resx">
+      <DependentUpon>20_FSAPKY_010_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_008_2.resx">
+      <DependentUpon>20_FSAPKY_008_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_010_2.resx">
+      <DependentUpon>20_FSAPKY_010_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_011_1.resx">
+      <DependentUpon>20_FSAPKY_011_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\20_FSAPKY_011_2.resx">
+      <DependentUpon>20_FSAPKY_011_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_012_1.resx">
+      <DependentUpon>20_FSAPKY_012_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_20URVT\20_FSAPKY_012_2.resx">
+      <DependentUpon>20_FSAPKY_012_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AciklamaGirisi.resx">
+      <DependentUpon>AciklamaGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\AktiviteIslemleri_2.resx">
+      <DependentUpon>AktiviteIslemleri_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\AkviteIslemleri.resx">
+      <DependentUpon>AkviteIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AnalizEkranlari.resx">
+      <DependentUpon>AnalizEkranlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\AtanmisIsler.resx">
+      <DependentUpon>AtanmisIsler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranAnalizGiris.resx">
+      <DependentUpon>AyranAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranGunlukOzet_1.resx">
+      <DependentUpon>AyranGunlukOzet_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranGunlukOzet_2.resx">
+      <DependentUpon>AyranGunlukOzet_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranGunlukOzet_3.resx">
+      <DependentUpon>AyranGunlukOzet_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranPaketlemeAnalizi.resx">
+      <DependentUpon>AyranPaketlemeAnalizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranProsesTakip_1.resx">
+      <DependentUpon>AyranProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranProsesTakip_1_1.resx">
+      <DependentUpon>AyranProsesTakip_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\AyranProsesTakip_3.resx">
+      <DependentUpon>AyranProsesTakip_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\BanaAitİsler.resx">
+      <DependentUpon>BanaAitİsler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\CustomMsgBox.resx">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\CustomMsgBtn.resx">
+      <DependentUpon>CustomMsgBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\Barkod.resx">
+      <DependentUpon>Barkod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\GunlukTemizlik.resx">
+      <DependentUpon>GunlukTemizlik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\UretimRaporu.resx">
+      <DependentUpon>UretimRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\UygunUygunDegil.resx">
+      <DependentUpon>UygunUygunDegil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\Yukleniyor.resx">
+      <DependentUpon>Yukleniyor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerSetup.resx">
+      <DependentUpon>InstallerSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\KasarPeynirAnalizGiris.resx">
+      <DependentUpon>KasarPeynirAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\KaymakPeynirAnalizGiris.resx">
+      <DependentUpon>KaymakPeynirAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\LorAnalizGiris.resx">
+      <DependentUpon>LorAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\LorProsesTakip.resx">
+      <DependentUpon>LorProsesTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\MatrixKolonBirlestirme.resx">
+      <DependentUpon>MatrixKolonBirlestirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\PartiSecimi.resx">
+      <DependentUpon>PartiSecimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\PastorizasyonProsesTakip_1.resx">
+      <DependentUpon>PastorizasyonProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FORM_ORTAK\TarihGirisi.resx">
+      <DependentUpon>TarihGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\SaatTarihGirisi.resx">
+      <DependentUpon>SaatTarihGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\SayiKlavyesiNew.resx">
+      <DependentUpon>SayiKlavyesiNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\SelectList.resx">
+      <DependentUpon>SelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TazePeynirProsesTakip_1.resx">
+      <DependentUpon>TazePeynirProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TazePeynirProsesTakip_2.resx">
+      <DependentUpon>TazePeynirProsesTakip_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TelemeProsesTakip_2.resx">
+      <DependentUpon>TelemeProsesTakip_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\TemizlikTakip.resx">
+      <DependentUpon>TemizlikTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TelemeAnalizGiris.resx">
+      <DependentUpon>TelemeAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TelemeProsesTakip.resx">
+      <DependentUpon>TelemeProsesTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TereyagAnalizGiris.resx">
+      <DependentUpon>TereyagAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TereyagProsesTakip_1.resx">
+      <DependentUpon>TereyagProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TereyagProsesTakip_2.resx">
+      <DependentUpon>TereyagProsesTakip_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TereyagTemizlikTakip.resx">
+      <DependentUpon>TereyagTemizlikTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TostPeynirProsesTakip_1.resx">
+      <DependentUpon>TostPeynirProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TostPeynirProsesTakip_2.resx">
+      <DependentUpon>TostPeynirProsesTakip_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\TostPeynirTemizlikTakip.resx">
+      <DependentUpon>TostPeynirTemizlikTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\UretimdenGirisMiktari.resx">
+      <DependentUpon>UretimdenGirisMiktari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CIKARILAN\UretimSarfiyat.resx">
+      <DependentUpon>UretimSarfiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ORTAK\UretimSarfiyat_2.resx">
+      <DependentUpon>UretimSarfiyat_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\YogurtAnalizGiris.resx">
+      <DependentUpon>YogurtAnalizGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\YogurtProsesTakip_1.resx">
+      <DependentUpon>YogurtProsesTakip_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\YogurtProsesTakip_1_1.resx">
+      <DependentUpon>YogurtProsesTakip_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_10URVT\YogurtProsesTakip_2.resx">
+      <DependentUpon>YogurtProsesTakip_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\UVTService\AIF.UVT.UVTService.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UVTService\UVTService1.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cikis.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aif_icon.ico" />
+    <None Include="Connected Services\UVTService\configuration91.svcinfo" />
+    <None Include="Connected Services\UVTService\configuration.svcinfo" />
+    <None Include="Connected Services\UVTService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\UVTService\UVTService1.disco" />
+    <Content Include="Images\YORUK_UVT_ArkaPlanv2.png" />
+    <Content Include="versionGecmisi.txt" />
+    <Content Include="version.xml" />
+    <Content Include="Images\aif_icon.ico" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\background2.jfif" />
+    <Content Include="Images\DAIRY_UVT.png" />
+    <Content Include="Images\login.jfif" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\minus.png" />
+    <None Include="Images\OTAT_UVT_ArkaPlanv2.jpeg" />
+    <None Include="Images\OTAT_UVT_ArkaPlan2.jpg" />
+    <Content Include="Images\OTAT_UVT_ArkaPlanV3.jpeg" />
+    <Content Include="Images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Images\YORUK_UVT_ArkaPlanv2.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\UVTService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>
