@@ -6805,10 +6805,10 @@
   </wsdl:binding>
   <wsdl:service name="UVTService">
     <wsdl:port name="UVTServiceSoap" binding="tns:UVTServiceSoap">
-      <soap:address location="http://172.55.10.20:3090/UVTService.asmx" />
+      <soap:address location="http://172.55.10.20:3093/UVTService.asmx" />
     </wsdl:port>
     <wsdl:port name="UVTServiceSoap12" binding="tns:UVTServiceSoap12">
-      <soap12:address location="http://172.55.10.20:3090/UVTService.asmx" />
+      <soap12:address location="http://172.55.10.20:3093/UVTService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -581,7 +581,7 @@ namespace AIF.UVT
 
                     if (Giris.mKodValue == "010OTATURVT")
                     {
-                        Barkod n = new Barkod(UretimFisNo, PartiNo, UrunTanimi, tarih, initialWidth, initialHeight, BarkodNumarasi, UrunKodu, "", _type);
+                        Barkod n = new Barkod(UretimFisNo, PartiNo, UrunTanimi, tarih, initialWidth, initialHeight, BarkodNumarasi, UrunKodu, gerceklesen, _type);
                         n.Show();
                     }
                     if (Giris.mKodValue == "20URVT")

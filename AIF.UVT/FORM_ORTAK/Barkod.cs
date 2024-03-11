@@ -516,7 +516,16 @@ namespace AIF.UVT
                 //g.DrawString(uretimFisNoAdi, fnt, brush, 5, 20);
                 //Değerler
                 g.DrawString(urunTanimi, fnt, brush, 5, 10);
-                g.DrawString(paletIciAdedi.ToString(), fnt, brush, 145, 50); //50 20220127
+
+                if (Giris.mKodValue== "010OTATURVT")
+                {
+                    g.DrawString(gerceklesenMik.ToString(), fnt, brush, 145, 50); //50 20220127
+                }
+                else
+                {
+                    g.DrawString(paletIciAdedi.ToString(), fnt, brush, 145, 50); //50 20220127
+                }
+                
                 g.DrawString(uretimTarihi, fnt, brush, 145, 67); //70 20220127
                 g.DrawString(sonTuketimTarihi, fnt, brush, 145, 84); //90 20220127
 

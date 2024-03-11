@@ -215,7 +215,7 @@ namespace AIF.UVT
 
         //public static SAPbobsCOM.Company oCompany;
 
-        public static string exeVersion = "1.0.0.39";
+        public static string exeVersion = "1.0.0.40";
         public static string mKodValue = System.Configuration.ConfigurationManager.AppSettings["MusteriKodu"];
         private List<ComboValues> comboValues = new List<ComboValues>();
         public static string value = "";

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://172.55.10.20:3090/UVTService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://172.55.10.20:3093/UVTService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UVTService1.disco" MetadataType="Disco" ID="71e0d570-4290-4afe-a500-22b5dff19c2c" SourceId="1" SourceUrl="http://172.55.10.20:3090/UVTService.asmx?disco" />
-    <MetadataFile FileName="UVTService1.wsdl" MetadataType="Wsdl" ID="f500c6dd-702a-45e7-95ee-737ab4ce6ab5" SourceId="1" SourceUrl="http://172.55.10.20:3090/UVTService.asmx?wsdl" />
+    <MetadataFile FileName="UVTService.wsdl" MetadataType="Wsdl" ID="98eed29e-7c0e-4037-9dd1-4a4900c6e146" SourceId="1" SourceUrl="http://172.55.10.20:3093/UVTService.asmx?wsdl" />
+    <MetadataFile FileName="UVTService.disco" MetadataType="Disco" ID="578ff593-1270-478f-805b-af1f76e55c7e" SourceId="1" SourceUrl="http://172.55.10.20:3093/UVTService.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
